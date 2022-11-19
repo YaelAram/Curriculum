@@ -1,6 +1,7 @@
 /* General */
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: white;
 }
 
 .icon-text-box{
@@ -10,6 +11,15 @@ body{
 
 .nav-title, .icon-span-des{
     margin-left: 0.5rem;
+}
+
+.icon-span-des, .about{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    text-align: justify;
 }
 
 a, li, h1, h2, h3, p{
@@ -38,7 +48,7 @@ a, li, h1, h2, h3, p{
 /* Header */
 nav{
     width: calc(100vw - 0.75rem);
-    background-color: white;
+    background-color: black;
     position: fixed;
     top: 0px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -58,6 +68,7 @@ nav{
     text-align: left;
     font-size: large;
     font-weight: bolder;
+    color: white;
 }
 
 .navbar-ul{
@@ -85,6 +96,7 @@ nav{
 /* Main */
 main{
     margin-top: 6rem;
+    padding: 1.5rem;
 }
 
 .svg-icon{
@@ -109,6 +121,77 @@ main{
     margin-block: 0;
 }
 
+/* Educacion */
+.escuelas-cards, .proyectos-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.escuela-card, .proyecto-card{
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+    margin-bottom: 2rem;
+}
+
+.escuela-card{
+    text-align: center;
+}
+
+.escuela-card, .proyecto-info{
+    padding: 1rem;
+}
+
+.escuela-logo{
+    width: 120px;
+    height: 120px;
+}
+
+/* Experiencia Laboral */
+.fondo{
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+.fondo-proyecto{
+    width: 100%;
+}
+
+.titulo-proyecto{
+    margin-block: 0;
+}
+
+.about{
+    font-style: italic;
+    font-weight: lighter;
+    display: block;
+    text-align: right;
+    text-decoration: underline;
+}
+
+/* Referencias */
+.tabla-referencias{
+    text-align: center;
+    width: 100%;
+}
+
+tr:nth-child(even){
+    background-color: rgb(201, 201, 201);
+}
+
+th{
+    background-color: black;
+    color: white;
+}
+
+th, td{
+    padding: 0.4rem 0.3rem;
+}
+
+/* Contacto */
+.contact-item{
+    margin-top: 0.5rem;
+}
+
 /* Responsive */
 @media only screen and (min-width: 600px) {
     nav{
@@ -130,6 +213,10 @@ main{
     .navbar-li{
         display: inline;
         margin-right: 1.75rem;
+    }
+
+    th, td{
+        padding: 0.8rem 0.4rem;
     }
 }
 
@@ -155,7 +242,7 @@ main{
     }
 
     .navbar-a{
-        color: black;
+        color: white;
     }
 
     .navbar-span{
@@ -167,6 +254,17 @@ main{
         height: 20px;
         width: 20px;
     }
+
+    /* Educacion */
+    .escuelas-cards, .proyectos-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .escuela-card{
+        padding: 0;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -174,5 +272,12 @@ main{
         display: grid;
         grid-template-columns: 1fr 5fr;
         gap: 0.125rem;
+    }
+
+    /* Educacion */
+    .proyectos-cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
     }
 }
